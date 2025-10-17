@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+
+
+  <script>
+    alert('Hello from an internal script in <head>!');
+    console.log('<head>');
+  </script>
+</head>
+<body>
+  <h1>JavaScript</h1>
+
+  <script>
+    alert('Hello from an internal script before </body>!');
+    console.log('before </body>');
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
