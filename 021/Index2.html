@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekday Planner</title>
+</head>
+<body>
+  <script>
+    const input = prompt("Enter the number of the day of the week (1–7), where 1 is Monday:");
+    const day = parseInt(input);
+
+    let activity;
+
+    switch (day) {
+      case 1:
+        activity = "Monday: Coding Session";
+        break;
+      case 2:
+        activity = "Tuesday: Sports";
+        break;
+      case 3:
+        activity = "Wednesday: Creative Workshop";
+        break;
+      case 4:
+        activity = "Thursday: Study Time";
+        break;
+      case 5:
+        activity = "Friday: Movie Night";
+        break;
+      case 6:
+      case 7:
+        activity = "Weekend: Enjoy Leisure Time";
+        break;
+      default:
+        activity = "Invalid input. Please enter a number from 1 to 7.";
+    }
+
+    alert(activity);
+  </script>
+</body>
+</html>

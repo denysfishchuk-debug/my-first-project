@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Vending Machine</title>
+</head>
+<body>
+  <script>
+    const basePrice = 2.50;
+    const age = prompt(" Enter your age:");
+
+    const studentInput = prompt("Do you have a valid student ID?:").toLowerCase();
+    const isStudent = studentInput === "yes" || studentInput === "ja";
+
+    let finalPrice;
+
+    if (age < 6) {
+      finalPrice = 0;
+    } else if (isStudent && age < 27) {
+      finalPrice = basePrice * 0.5;
+    } else if (age > 65) {
+      finalPrice = basePrice * 0.75;
+    } else {
+      finalPrice = basePrice;
+    }
+
+    alert(`Final ticket price: €${finalPrice}`);
+  </script>
+</body>
+</html>
+

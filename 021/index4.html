@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>for</title>
+  </head>
+  <body>
+    <script>
+      // Countdown from 10 to 1, then "Start!"
+      for (let i = 10; i >= 0; i--) {
+        if (i === 0) {
+          console.log("🚀 Start!");
+        } else {
+          console.log(i);
+        }
+      }
+
+
+
+
+
+
+
+
+      // Sum of numbers from 1 to 100
+      let sum = 0;
+      for (let i = 1; i <= 100; i++) {
+        sum += i;
+      }
+      console.log("Sum from 1 to 100 is:", sum);
+
+      let number = 0;
+
+      // Цикл продолжается, пока число не станет положительным
+      while (number <= 0) {
+        const input = prompt("Enter a positive number:");
+        number = parseFloat(input);
+      }
+
+      alert("You entered: " + number);
+
+
+
+
+
+
+
+
+
+      const secretNumber = Math.floor(Math.random() * 10) + 1;
+      let guess;
+
+
+      do {
+        const input = prompt("🎲 Угадай число от 1 до 10:");
+        guess = parseInt(input);
+
+         if (guess < secretNumber) {
+          alert("Too low!");
+        } else if (guess > secretNumber) {
+          alert("Too high!");
+        }
+      } while (guess !== secretNumber);
+
+      alert("Richtig! Die gesuchte Zahl lautet: " + secretNumber);
+    </script>
+  </body>
+</html>
