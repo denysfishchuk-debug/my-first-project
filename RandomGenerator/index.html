@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Random Generator</title>
+  </head>
+  <body>
+    between
+    <input type="text" id="min" value="1" />
+    and
+    <input type="text" id="max" value="10" />
+    <button id="klick-mich">Generate</button>
+
+    <h1 id="result">Result</span>
+
+    <script>
+      const klickMichBtn = document.getElementById("klick-mich");
+      const min = document.getElementById("min").value;
+      const max = document.getElementById("max").value;
+      const result = document.getElementById("result");
+
+      function NumberGenerator(event) {
+        // console.log(min);
+        // console.log(max);
+        const minInt = Math.ceil(min);
+        const maxInt = Math.floor(max);
+        result.textContent =
+          Math.floor(Math.random() * (maxInt - minInt + 1)) + minInt;
+      }
+
+      klickMichBtn.addEventListener("click", NumberGenerator);
+    </script>
+  </body>
+</html>
